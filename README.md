@@ -39,3 +39,13 @@ Basic Setup
 9. In my case, I had to add www-data to the sudoers file to allow access to the serial ports (sudo visudo, add line below to the end:)
 www-data ALL=(ALL) NOPASSWD: ALL
 10. Restart Pi and you should have a web enabled heater relay with temperature reading
+
+
+
+RESOURCES
+=========
+- http://www.seeedstudio.com/wiki/Relay_Shield_v3.0
+- http://stackoverflow.com/questions/21659637/how-to-fix-sudo-no-tty-present-and-no-askpass-program-specified-error
+- http://www.instructables.com/id/Read-and-write-from-serial-port-with-Raspberry-Pi/
+- https://learn.sparkfun.com/tutorials/bmp180-barometric-pressure-sensor-hookup-/installing-the-arduino-library
+- https://github.com/sparkfun/BMP180_Breakout
