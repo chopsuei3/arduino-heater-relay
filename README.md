@@ -2,26 +2,32 @@
 Arudino connected heater relay for 2-wire heater system
 Uses the SEEED relay shield v2.1
 
-A basic example of a relay connected to the Arduino which can receive the following commands over the serial port - 
+A basic example of a relay connected to the Arduino which can receive the following commands over the serial port.
 
-# = Read sensor setting
-@ = Switch relay OFF if ON, and ON if OFF
-! = Read temperature from BMP180 sensor
+COMMANDS
+--------
+- # = Read sensor setting
+- @ = Switch relay OFF if ON, and ON if OFF
+- ! = Read temperature from BMP180 sensor
 
-Included files - 
+Included files
+==============
 
 FOR ARDUINO
-heater-relay.ino = Arduino script which communicates over the serial TX/RX ports, accepts relay commands, and reads state and temperature
-BMP180.zip = BMP180 library for Arduino
+-----------
+- heater-relay.ino = Arduino script which communicates over the serial TX/RX ports, accepts relay commands, and reads state and temperature
+- BMP180.zip = BMP180 library for Arduino
 
 FOR DEVICE CONNECTED TO SERIAL TX/RX (Rasp Pi, BBB, etc.)
-heater.php = Basic web page to read and write relay status and temperature, uses exec python scripts
-read-state.py = Sends serial command to read relay state from Arduino
-write-state.py = Switches relay OFF if ON, and ON if OFF.  Call read-state first to determine whether to call write-state
-read-temp.py = Reads temperature from BMP180 sensor
+---------------------------------------------------------
+- heater.php = Basic web page to read and write relay status and temperature, uses exec python scripts
+- read-state.py = Sends serial command to read relay state from Arduino
+- write-state.py = Switches relay OFF if ON, and ON if OFF.  Call read-state first to determine whether to call write-state
+- read-temp.py = Reads temperature from BMP180 sensor
 
 
 Basic Setup
+===========
 1. Attach SEEED relay shield v2.1
 2. Load Arduino Uno with include ino
 3. Attach BMP180 sensor to Arduino (3.3V to VCC, GND to GND, SCL to A5, SDA to A4)
